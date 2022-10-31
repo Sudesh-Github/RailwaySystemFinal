@@ -1,0 +1,20 @@
+<nav  class="navbar navbar-expand-xl navbar-light bg-light">
+    <img class="logo" src="assets\Images\train4.jpg" width="58" height="65" >
+    <a class="navbar-brand" routerLink="/login/user/dashboard" font>Trainéieren</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse justify-content-end navbar-right" id="navbarSupportedContent">
+      <ul class="navbar-nav text-dark text-centre ">
+        <li class="nav-item active">
+            <a class="nav-link" *ngIf="userDetails"><mat-icon>account_circle</mat-icon>Hello,{{userDetails.Name}}</a>
+          </li>
+          
+        <li class="nav-item active">
+          <a class="nav-link" (click)="onLogout()"><mat-icon>exit_to_app</mat-icon>Logout </a>
+        </li>
+        
+      </ul>
+        </div>
+  </nav>
