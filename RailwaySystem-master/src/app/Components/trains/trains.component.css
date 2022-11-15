@@ -9,11 +9,28 @@ button{
 input{
     width:50rem;
 }
-.tbody:hover {background-color:rgb(210, 228, 222);}
+.tbody:hover {
+
+    background-color:rgb(210, 228, 222);
+
+    
+}
+
+.tbody{
+    font-size: bold;
+}
 
 .container
 {
-    background-image: url('\src\assets\Images\train2.jpg');
     background-repeat: no-repeat;
     background-size: 1500px 1000px;
+}
+
+.main
+{
+    background-image: url('https://images5.alphacoders.com/661/thumbbig-661838.webp');
+    background-position: fixed;
+    background-repeat: none;
+    background-size: cover;
+    
 }

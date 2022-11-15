@@ -11,12 +11,17 @@ import { Router,RouterModule } from '@angular/router';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatIconModule} from '@angular/material/icon';
 import {MatDatepickerModule} from '@angular/material/datepicker';
+import { AdminDashboardComponent } from './Components/admin-dashboard/admin-dashboard.component';
 import { UserDashboardComponent } from './Components/user-dashboard/user-dashboard.component';
 import { AboutUsComponent } from './Components/about-us/about-us.component';
 import { ContactUsComponent } from './Components/contact-us/contact-us.component';
 import { SignupComponent } from './Components/signup/signup.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { AdminNavbarComponent } from './Components/admin-dashboard/admin-navbar/admin-navbar.component';
 import { TrainsComponent } from './Components/trains/trains.component';
+import { SaveTrainsComponent } from './Components/admin-dashboard/save-trains/save-trains.component';
+import { SidebarComponent } from './Components/admin-dashboard/sidebar/sidebar.component';
+import { SaveSeatsComponent } from './Components/admin-dashboard/save-seats/save-seats.component';
 import { LoginComponent } from './Components/login/login.component';
 import { AuthGuard } from './Auth/auth.guard';
 import { AddPassengerComponent } from './Components/add-passenger/add-passenger.component';
@@ -31,6 +36,8 @@ import { TransactionComponent } from './Components/user-dashboard/transaction/tr
 import { UserNavComponent } from './Components/user-dashboard/user-nav/user-nav.component';
 import { TicketComponent } from './Components/user-dashboard/ticket/ticket.component';
 import { BookingHistoryComponent } from './Components/user-dashboard/booking-history/booking-history.component';
+import { ReportComponent } from './Components/admin-dashboard/report/report.component';
+import { FoodComponent } from './Components/food/food.component';
 import { StationComponent } from './Components/user-dashboard/station/station.component';
 
 
@@ -40,12 +47,17 @@ import { StationComponent } from './Components/user-dashboard/station/station.co
     HomeComponent,
     NavbarComponent,
     FooterComponent,
-    HomeComponent,  
+    HomeComponent,
+    AdminDashboardComponent,
     UserDashboardComponent,
     AboutUsComponent,
     ContactUsComponent,
     SignupComponent,
+    AdminNavbarComponent,
     TrainsComponent,
+    SaveTrainsComponent,
+    SidebarComponent,
+    SaveSeatsComponent,
     LoginComponent,
     AddPassengerComponent,
     BookingComponent,
@@ -53,7 +65,9 @@ import { StationComponent } from './Components/user-dashboard/station/station.co
     UserNavComponent,
     TicketComponent,
     BookingHistoryComponent,
-    StationComponent 
+    ReportComponent,
+    FoodComponent,
+   
    
    
   ],
@@ -64,8 +78,11 @@ import { StationComponent } from './Components/user-dashboard/station/station.co
       {path:'home', component:HomeComponent},
       // {path:'admin-dashboard', component:AdminDashboardComponent},
       {path:'sign-up', component:SignupComponent},
+      {path:'login/user/food', component:FoodComponent,canActivate:[AuthGuard]},
+      {path:'login/user/dashboard/station', component:StationComponent,canActivate:[AuthGuard]},
       {path:'login/user/dashboard/trains', component:TrainsComponent,canActivate:[AuthGuard]},
-    
+      {path:'login/admin/dashboard/save-train', component:SaveTrainsComponent,canActivate:[AuthGuard]},
+      {path:'login/admin/dashboard/save-seats', component:SaveSeatsComponent,canActivate:[AuthGuard]},
       {path:'login/user/dashboard/add-passenger', component:AddPassengerComponent,canActivate:[AuthGuard]},
       {path:'login/user/dashboard/booking',component:BookingComponent,canActivate:[AuthGuard]},
       {path:'login/user/dashboard/ticket',component:TicketComponent,canActivate:[AuthGuard]},
@@ -74,8 +91,10 @@ import { StationComponent } from './Components/user-dashboard/station/station.co
       {path: '', redirectTo: 'home', pathMatch: 'full'},
       {path:'signup', component:SignupComponent},
       {path:'login', component:LoginComponent},
-      {path:'login/user/dashboard/station', component:StationComponent, canActivate:[AuthGuard]},
+      
+      {path:'login/admin/dashboard', component:AdminDashboardComponent, canActivate:[AuthGuard]},
       {path:'login/user/dashboard', component:UserDashboardComponent, canActivate:[AuthGuard]},
+      {path:'login/admin/dashboard/report',component:ReportComponent}
      ]),
      
      HttpClientModule,

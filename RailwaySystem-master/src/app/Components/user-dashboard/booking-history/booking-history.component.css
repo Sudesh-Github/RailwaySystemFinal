@@ -1,4 +1,19 @@
 button{
-    height: 2.5rem;
-    width: 3.5rem;
+   width: 175px;
+   position: relative;
+}
+/* 
+.main
+{
+    background-image: url('https://img.freepik.com/free-photo/subway-station-new-york-usa_53876-160507.jpg?size=626&ext=jpg&ga=GA1.2.538034476.1667547023&semt=sph');
+    background-position: fixed;
+    background-repeat: none;
+    background-size: cover;
+}    */
+
+.tablemt-4{
+    border-radius: 30px;
+}
+.th{
+    color: red;
 }

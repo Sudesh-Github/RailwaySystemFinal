@@ -2,7 +2,9 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { map, Observable } from 'rxjs';
 import { User } from './Components/signup/signup.model';
+import { food } from './Models/food.model';
 import { passenger } from './Models/passenger.model';
+import { Seats } from './Models/seat.model';
 import { Train } from './Models/train.model';
 
 @Injectable({
@@ -11,7 +13,9 @@ import { Train } from './Models/train.model';
 export class SharedService {
   public userServices:User;
   public TrainS:Train;
+  public Seats:Seats;
   public Passenger:passenger;
+  public Food:food;
   readonly APIUrl ="https://localhost:44379/api"
   constructor(private http:HttpClient ) { }
 
@@ -43,14 +47,21 @@ export class SharedService {
     return this.http.get<Train>(this.APIUrl+'/Train/SearchTrainsSeat2?ArrivalStation='+arr+'&DepartureStation='+dept+'&date='+date);
 
   }
-  
+  GetSeatById(id:number){
+    return this.http.get<Seats>(this.APIUrl+'/Seat/GetSeat?SeatId='+id);
+  }
 
-  
+  getAllSeats():Observable<Seats>{
+    return this.http.get<Seats>(this.APIUrl+'/Seat/GetAllSeats()');
+    
+  }
   updateSeats(id:number,data:any){
     return this.http.put<any>(this.APIUrl+'/Seat/UpdateSeat?SeatId='+id,data);
 
   }
-  
+  saveSeat(val:any){
+    return this.http.post<Seats>(this.APIUrl+'/Seat/SaveSeat',val);
+  }
  
   Login(formData: any){
     console.log(formData);
@@ -79,6 +90,12 @@ export class SharedService {
   }
   report(tid:number){
     return this.http.get<any>(this.APIUrl+'/Passenger/GetReport?TrainId='+tid);
+  }
+
+  //food
+
+  addFood(val:any){
+    return this.http.post<food>(this.APIUrl+'/Food/AddFood',val);
   }
 
   //fare

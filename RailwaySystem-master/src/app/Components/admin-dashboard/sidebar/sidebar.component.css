@@ -1,0 +1,39 @@
+.sidebar-nav ul li a {
+    font-size: 26px;
+    text-decoration: none;
+    display: block;
+    padding: 6px 10px;
+    transition: 0.5s;
+}
+.sidebar-nav ul li a:hover {
+    background-color:aliceblue;
+    border: none;
+}
+.sidebar-nav .offcanvas {
+    width: 220px;
+    border: none;
+   
+}
+.sidebar-nav .offcanvas ul li a  {
+    font-size: 18px;
+    position: relative;
+    top: 20px;
+    transition: 0.5s;
+}
+.sidebar-nav .offcanvas.show ul li a:hover  {
+    padding-left: 5px;
+    border: none;
+}
+
+
+.navbar{
+    background-color: aliceblue;
+}
+.span .textnone{
+   
+    background-color: aliceblue;
+}
+button{
+    text-decoration: none;
+    border: none;
+}

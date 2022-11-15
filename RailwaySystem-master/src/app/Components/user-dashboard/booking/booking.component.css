@@ -34,7 +34,12 @@ td,th {
 
    
     border: solid 1px;
+  }
+
+  .main
+  {
     background-image: url('\src\assets\Images\train6.jpg');
+
   }
   button{
     margin-top: 3rem;

@@ -2,10 +2,10 @@
 
 
 #main {
-	max-width: 1060px;
-	background-image: url('\src\assets\Images\train8.jpg');
-	background-size: 1000px 800px;
-	background-repeat: no-repeat;
+	background-image: url('https://c1.wallpaperflare.com/preview/29/85/277/antwerp-station-central-station-city.jpg');
+	background-position: fixed;
+    background-repeat: none;
+    background-size: cover;
 
 }
 
@@ -26,6 +26,8 @@ span {
 	border-top-right-radius: 19px;
 	background-color:rgb(216, 152, 15);
 	height: 60px;
+	font-size: large;
+	font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 .ticket-middle {

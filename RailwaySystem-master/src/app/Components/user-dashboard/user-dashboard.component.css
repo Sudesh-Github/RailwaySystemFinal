@@ -1,22 +1,40 @@
+
+
+.main
+{
+    background-color: tomato;
+    background-image: url('https://images7.alphacoders.com/661/thumbbig-661783.webp');
+    background-position: fixed;
+    background-repeat: none;
+    background-size: cover;
+}
 .btn-danger{
-    height: 5px;
-    width:5px;
+  height: 50px;
+  width:50px;
 }
 .container{
-    margin-top: 6rem;
-    padding-bottom: 20%;
-    background-color: saddlebrown;
+  margin-top: 6rem;
+  padding-bottom: 20%;
 }
 .card1{
-    margin-top: 21rem;
+  margin-top: 2rem;
 
 }
-
+img{
+  width:18rem;
+  height:18rem;
+}
 .img-banner{
-    width:3rem;
+  width:30rem;
 }
-
+.card:hover{
+  transform: scale(1.05);
+box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
+}
+.card1:hover{
+  transform: scale(1.05);
+box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
+}
 .card{
-    border:black;
-    background-color: chartreuse;
+  border:none;
 }

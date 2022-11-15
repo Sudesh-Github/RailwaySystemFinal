@@ -14,22 +14,22 @@ namespace RailwaySystem.API.Repository
         {
             trainDb = _trainDb;
         }
-        public Passenger AddPassenger(Passenger passenger)
+        public Passenger AddPassenger(Passenger Passenger)
         {
             string stCode = string.Empty;
             try
             {
-                trainDb.passenger.Add(passenger);
+                trainDb.Passenger.Add(Passenger);
                 trainDb.SaveChanges();
 
-                return passenger;
+                return Passenger;
             }
             catch (Exception ex)
             {
                 //return ex.Message;
                 stCode = "400";
             }
-            return passenger;
+            return Passenger;
         }
 
         public string DeletePassenger(int PassengerId)
@@ -40,11 +40,11 @@ namespace RailwaySystem.API.Repository
 
             try
             {
-                delete = trainDb.passenger.Find(PassengerId);
+                delete = trainDb.Passenger.Find(PassengerId);
 
                 if (delete != null)
                 {
-                    trainDb.passenger.Remove(delete);
+                    trainDb.Passenger.Remove(delete);
                   
                     trainDb.SaveChanges();
                     Result = "200";
@@ -64,46 +64,46 @@ namespace RailwaySystem.API.Repository
         public List<Passenger> GetAllPassengers()
         {
             
-            List<Passenger> passenger = null;
+            List<Passenger> Passenger = null;
             try
             {
-                passenger = trainDb.passenger.ToList();
-                return passenger;
+                Passenger = trainDb.Passenger.ToList();
+                return Passenger;
 
             }
             catch (Exception ex)
             {
 
             }
-            return passenger;
+            return Passenger;
         }
 
         public Passenger GetPassenger(int PassengerId)
         {
-            Passenger passenger = null;
+            Passenger Passenger = null;
             try
             {
-                passenger = trainDb.passenger.Find(PassengerId);
-                return passenger;
+                Passenger = trainDb.Passenger.Find(PassengerId);
+                return Passenger;
             }
             catch (Exception ex)
             {
 
             }
-            return passenger;
+            return Passenger;
         }
 
-        public Passenger UpdatePassenger(int PassengerId, Passenger passenger)
+        public Passenger UpdatePassenger(int PassengerId, Passenger Passenger)
         {
             
-            var passengers = trainDb.passenger.FirstOrDefault(q => q.PassengerId == PassengerId);
+            var Passengers = trainDb.Passenger.FirstOrDefault(q => q.PassengerId == PassengerId);
             try
             {
-                if (passengers != null)
+                if (Passengers != null)
                 {
-                    passengers.PName = passenger.PName;
-                    passengers.Age = passenger.Age;
-                    passengers.gender = passenger.gender;
+                    Passengers.PName = Passenger.PName;
+                    Passengers.Age = Passenger.Age;
+                    Passengers.gender = Passenger.gender;
                 
                 }
             }
@@ -111,11 +111,11 @@ namespace RailwaySystem.API.Repository
             {
                 throw;
             }
-            return passengers;
+            return Passengers;
         }
         public IEnumerable<Report> GetReport(int TrainId)
         {
-            var Result = (from p in trainDb.passenger
+            var Result = (from p in trainDb.Passenger
                           join b in trainDb.bookings on p.PassengerId equals b.PassengerId where b.TrainId==TrainId
                           select new Report
                           {

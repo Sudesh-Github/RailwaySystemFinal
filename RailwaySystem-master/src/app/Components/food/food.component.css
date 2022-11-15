@@ -1,0 +1,21 @@
+.form-control{
+    border: none;
+}
+input{
+    border: solid;
+}
+.container{
+    margin-top: 20px;
+    background-color: coral;
+    
+}
+button{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    /* margin-left: 65rem; */
+    border-radius: 8px;
+  
+}
+span{
+    color: red;
+}

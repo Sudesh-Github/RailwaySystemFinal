@@ -7,9 +7,10 @@ input{
     border:none;
 }
 body{
-    background-image: url('\src\assets\Images\train7.jpg');
-    background-size: 1000px 800px;
-  background-repeat: no-repeat;
+    background-image: url('https://img.freepik.com/free-vector/rupee-symbol-digital-technology-background_1017-36810.jpg?size=626&ext=jpg&ga=GA1.2.538034476.1667547023&semt=sph');
+    background-position: fixed;
+    background-repeat: none;
+    background-size: cover;
 
 }
     

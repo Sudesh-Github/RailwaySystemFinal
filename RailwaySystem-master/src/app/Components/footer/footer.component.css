@@ -4,8 +4,8 @@
 
 .footer {
     margin-top: 10px;
-    background: black;
-    color: #d3d3d3;
+    background: greenyellow;
+    color: black;
     height: 170px;
     position: relative;
 }
@@ -24,11 +24,11 @@
 
 .footer .footer-content h1,
 .footer .footer-content h2 {
-    color: rgb(222, 212, 212);
+    color: rgb(30, 55, 195);
 }
 
 .footer .footer-content .about h1 span {
-    color: rgb(133, 202, 14);
+    color: rgb(226, 13, 116);
 }
 
 .footer .footer-content .Social-media .contact span {
@@ -38,7 +38,7 @@
 }
 
 .footer .footer-content .Social-media .socials a {
-    border: 1px solid grey;
+    border: 1px solid rgb(15, 136, 211);
     width: 45px;
     height: 41px;
     padding-top: 5px;
@@ -70,6 +70,6 @@
 }
 
 a {
-    color: beige;
+    color: rgb(205, 60, 3);
     text-decoration: none;
 }

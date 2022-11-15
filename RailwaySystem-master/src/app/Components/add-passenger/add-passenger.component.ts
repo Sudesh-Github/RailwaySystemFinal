@@ -6,7 +6,14 @@ import { passenger } from 'src/app/Models/passenger.model';
 
 import { SharedService } from 'src/app/shared.service';
 import { FooterService } from 'src/app/SharedService/footer.service';
+import { JQueryStyleEventEmitter } from 'rxjs/internal/observable/fromEvent';
 
+declare var $: any;
+
+
+$("#testButton").click(function() {
+  $("#BuyerForm").clone().appendTo("#container");
+});  
 
 @Component({
   selector: 'app-add-passenger',
@@ -91,5 +98,8 @@ export class AddPassengerComponent implements OnInit {
      
      
   }
+
+  
   
 }
+

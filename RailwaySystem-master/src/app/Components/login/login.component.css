@@ -13,7 +13,7 @@ body,
 }
 
 .section-login {
-  background-image: url('\src\assets\Images\train5.jpg');
+  background-image: url('https://images2.alphacoders.com/104/thumbbig-1042331.webp');
   /* background-color: #5356ad; */
   min-height: 100vh;
   padding: 50px 0;
@@ -26,7 +26,7 @@ span {
 }
 .section-login .container {
   padding-left: 15px;
-  padding-right: 15px;
+  padding-right: 105px;
   max-width: 800px;
   margin: 0 auto;
   min-height: 100vh;
@@ -35,25 +35,26 @@ span {
   align-items: center;
   justify-content: center;
 }
-/* .section-login .form-container {
-  background-color: #a1d2e6;
+.section-login .form-container {
   padding: 2.5rem 1.5rem;
   flex: 1;
   position: relative;
   min-height: 300px;
+  max-height: 100px;
   opacity: 0.8;
-
+  
   display: flex;
   justify-content: flex-end;
-} */
+}
 
 .section-login .form-container .form {
   background-color: #fff;
-  width: 55%;
+  width: 105%;
   padding: 2rem 1.5rem;
   position: absolute;
   top: 50%;
-  left: 1.5rem;
+  left: 50%;
+  left: 3.5rem;
   transform: translateY(-50%);
   min-height: 400px;
   height: 60vh;
@@ -139,17 +140,20 @@ span {
   }
   .section-login .form-container .form,
   .section-login .form-container .sign-up {
-    position: static;
+    position: fixed;
     transform: initial;
     width: initial;
   }
   .section-login .form-container .form {
-    width: 130%;
+    width: 230%;
     position: relative;
-    left: 50%;
+    left: 120%;
+    right: 20%;
     transform: translateX(-50%);
   }
   .section-login .form-container .sign-up {
     margin-top: 50px;
+    margin-left: 60px;
+    margin-bottom: 40px;
   }
 }

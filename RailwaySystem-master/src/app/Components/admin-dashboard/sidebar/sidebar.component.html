@@ -1,0 +1,30 @@
+<div class="sidebar-nav">
+    <nav class="navbar navbar-light fixed-top">
+        <div class="container">
+            <!-- Mobile Menu Toggle Button -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" >
+                <img class="logo" src="assets\Images\icon.png" width="35" height="35" ><label>Locomotive</label>
+            </button>
+            <!-- Menus List -->
+            <div class="offcanvas offcanvas-start shadow" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+              <div class="offcanvas-body">
+                    <ul class="navbar-nav">
+                        <li><a routerLink='/login/admin/dashboard'><span class="item-text bi-train">Dashboard</span></a></li>
+                        <li><a routerLink="/login/admin/dashboard/save-train"><span class="item-text bi-train">Train</span></a></li>
+                        <li><a> <span class="item-text">Seats</span></a></li>
+                        <li><a > <span class="item-text">Routes</span></a></li>
+                        <li><a > <span class="item-text">Customers</span></a></li>
+                        
+                    </ul>
+              </div>
+            </div>
+            <div class="btn-group">
+                <button  class="text-decoration-none"  aria-expanded="false">
+                    
+                    <span class="textnone">Hello Admin</span>
+                    <span class="textnone" (click)="onLogout()" style="margin-left: 20px;">Sign Out</span>
+                </button>
+        </div>
+        </div>
+    </nav>
+  </div>

@@ -87,6 +87,24 @@ namespace RailwaySystem.API.Migrations
                     b.ToTable("bookings");
                 });
 
+            modelBuilder.Entity("RailwaySystem.API.Models.Food", b =>
+                {
+                    b.Property<int>("FoodId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("FoodType")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("IsNeeded")
+                        .HasColumnType("bit");
+
+                    b.HasKey("FoodId");
+
+                    b.ToTable("Food");
+                });
+
             modelBuilder.Entity("RailwaySystem.API.Models.Passenger", b =>
                 {
                     b.Property<int>("PassengerId")
@@ -111,7 +129,7 @@ namespace RailwaySystem.API.Migrations
 
                     b.HasKey("PassengerId");
 
-                    b.ToTable("passenger");
+                    b.ToTable("Passenger");
                 });
 
             modelBuilder.Entity("RailwaySystem.API.Models.Quota", b =>
@@ -160,6 +178,10 @@ namespace RailwaySystem.API.Migrations
 
                     b.Property<int>("TrainId")
                         .HasColumnType("int");
+
+                    b.Property<string>("TrainName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("SeatId");
 

@@ -33,7 +33,7 @@ namespace RailwaySystem.API.Repository
             return seat;
         }
         #endregion
-
+         
         #region GetSeat
         public Seat GetSeat(int SeatId)
         {

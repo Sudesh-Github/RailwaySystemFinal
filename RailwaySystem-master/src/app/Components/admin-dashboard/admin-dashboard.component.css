@@ -1,0 +1,51 @@
+.btn-danger{
+    height: 5px;
+    width:5px;
+}
+
+
+.main
+{
+    background-image: url('https://img.freepik.com/free-vector/man-look-graphic-chart-business-analytics-concept-big-data-processing-icon_39422-761.jpg?w=826&t=st=1667830141~exp=1667830741~hmac=bcd2ae180e1836ffa657064f660739c3f68dc8e534527e64d8c658cde15a43f8');
+    background-position: fixed;
+    background-repeat: none;
+    background-size: cover;
+}
+
+.container{
+    margin-top: 6rem;
+    padding-bottom: 20%;
+    /* background-color: slateblue; */
+    /* background-image: url('\src\assets\Images\admin.jpg'); */
+    /* background-repeat: no-repeat;
+    background-size: 1400px 1000px; */
+}
+.card1{
+    margin-top: 21rem;
+
+}
+
+.card{
+    background-color: grey;
+}
+
+
+img{
+    width:18rem;
+    height:17rem;
+  }
+  .img-banner{
+    width:30rem;
+  }
+
+.card:hover{
+    transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
+  }
+  .card1:hover{
+    transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
+  }
+  .card{
+    border:none;
+  }

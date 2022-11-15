@@ -7,7 +7,8 @@ import { jsPDF } from 'jspdf';
   templateUrl: './ticket.component.html',
   styleUrls: ['./ticket.component.css']
 })
-export class TicketComponent implements OnInit {
+export class TicketComponent implements OnInit 
+{
   @ViewChild("ticket",{static:false}) el!: ElementRef;
   trainData:any;
   pData: any;
@@ -37,14 +38,17 @@ getBookingById(){
     this.bookingData=res;
     console.log(res);});
 }
-Remove(){
-//  let pdf = new jsPDF('l','pt','a4');
-//  pdf.text("Ticket",19,19)
-//  pdf.html(this.el.nativeElement,{
-//   callback:(pdf)=>{
-//     pdf.save("ticket.pdf");
-    alert("ticket will be sent to your email");
-  }
- 
-}
 
+Remove(){
+  let pdf = new jsPDF('l','pt','a4');
+  pdf.text("Ticket",19,19)
+  pdf.html(this.el.nativeElement,{
+   callback:(pdf)=>{
+     pdf.save("ticket.pdf");
+     alert("ticket generated");
+   }
+  });
+  
+ }
+ 
+ }

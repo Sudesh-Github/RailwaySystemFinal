@@ -1,4 +1,5 @@
 <app-user-nav></app-user-nav>
+<div class="main">
 <div class="container">
     <h2><b>Booking History.</b></h2>
     
@@ -32,10 +33,11 @@
                 <td>{{row.fare}}</td>
                 <td>
                     
-                    <button (click)="deleteBooking(row.BookingId)" class="btn btn-danger"><mat-icon>cancel</mat-icon></button>
+                    <button (click)="deleteBooking(row.BookingId)" class="btn btn-danger"><mat-icon>CANCEL</mat-icon></button>
                 </td>
             </tr>
         </tbody>
     </table> 
   
   </div>
+</div>

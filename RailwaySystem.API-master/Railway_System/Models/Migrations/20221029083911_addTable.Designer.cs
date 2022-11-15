@@ -113,7 +113,7 @@ namespace RailwaySystem.API.Migrations
 
                     b.HasKey("PassengerId");
 
-                    b.ToTable("passenger");
+                    b.ToTable("Passenger");
                 });
 
             modelBuilder.Entity("RailwaySystem.API.Models.Quota", b =>

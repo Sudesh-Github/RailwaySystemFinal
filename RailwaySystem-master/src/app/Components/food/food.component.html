@@ -1,0 +1,36 @@
+<app-user-nav></app-user-nav>
+<div class="container">
+    <h3>Confirm Food Details:</h3>
+    <form [formGroup]="formValue" (ngSubmit)="addFood()">
+          
+        <div  class="form-control" >
+            <mat-form-field class="MatFormFieldControl" appearance="fill">
+                Do You need Food Accomodation..?
+                <select matNativeControl required  formControlName="class" >
+                    <option label="--select something --"></option>
+                  <option value="Yes" >Yes</option>
+                  <option value="No">No</option>
+                  
+                </select>
+              </mat-form-field>
+        </div>
+
+          <div class="form-control">
+            <label class="md-check">
+                <input type="radio" value="Veg" name="text" formControlName="text">
+                Vegeterian
+              </label>
+              <br/>
+              <label class="md-check">
+                <input type="radio" value="Non-Veg" name="text" formControlName="text">     
+                Non-Vegeterian
+              </label>
+                
+        </div>
+        
+        <button class="btn btn-primary" [disabled]="!formValue.valid">Submit</button>
+                            
+    </form>
+</div>
+
+

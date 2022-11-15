@@ -1,4 +1,11 @@
 .onlycontentinner
 {
-    background-color: salmon;
+    /* background-image: url('https://images.alphacoders.com/108/thumbbig-1086127.webp'); */
+    font-size: medium;
+    color: white;
+    /* background-position: bottom right; */
+    background-repeat: no-repeat;
+    background-size: 100vw 100vh;
+    background-size: none;
+    background-color: steelblue;
 }
